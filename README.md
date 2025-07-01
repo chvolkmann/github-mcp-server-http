@@ -21,9 +21,14 @@ services:
 ```
 
 ```bash
+docker compose up -d
 # http://localhost:4444/mcp
 # http://localhost:4444/sse
-docker compose up -d
+```
+
+or directly
+```bash
+docker run --rm -it -e GITHUB_PERSONAL_ACCESS_TOKEN -p 127.0.0.1:4444:4444 ghcr.io/chvolkmann/github-mcp-server-http
 ```
 
 ## Usage in IDE
