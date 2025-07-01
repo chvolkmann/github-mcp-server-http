@@ -7,5 +7,5 @@ RUN npm install -g mcp-proxy
 
 COPY --from=github-mcp-server /server/github-mcp-server /bin/github-mcp-server
 
-EXPOSE 8000
-ENTRYPOINT ["mcp-proxy", "--port", "8000", "github-mcp-server", "stdio"]
+EXPOSE 4444
+ENTRYPOINT ["mcp-proxy", "--port", "4444", "github-mcp-server", "stdio"]

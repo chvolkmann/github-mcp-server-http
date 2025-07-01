@@ -2,6 +2,6 @@ services:
   github-mcp-server:
     image: ghcr.io/chvolkmann/github-mcp-server-http
     ports:
-      - 127.0.0.1:8080:8000
+      - 127.0.0.1:4444:4444
     environment:
       GITHUB_PERSONAL_ACCESS_TOKEN: ${GITHUB_PERSONAL_ACCESS_TOKEN}
