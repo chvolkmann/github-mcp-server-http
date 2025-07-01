@@ -1,0 +1,7 @@
+services:
+  github-mcp-server:
+    image: github-mcp-server-http:latest
+    ports:
+      - 127.0.0.1:8080:8000
+    environment:
+      GITHUB_PERSONAL_ACCESS_TOKEN: ${GITHUB_PERSONAL_ACCESS_TOKEN}

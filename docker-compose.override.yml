@@ -1,0 +1,4 @@
+services:
+  github-mcp-server:
+    pull_policy: never
+    build: .
