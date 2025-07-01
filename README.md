@@ -2,7 +2,7 @@
 
 This is a simple Docker image for providing [Github's MCP server](https://github.com/github/github-mcp-server) over HTTP. Both streamable HTTP and Server-Sent Events (SSE) are supported.
 
-Github currently only provides `stdio` transport for MCP, so this image uses [mcp-proxy](https://github.com/sparfenyuk/mcp-proxy) to expose the server over HTTP.
+Github's MCP docker image currently only provides `stdio` transport for MCP, so this image uses [mcp-proxy](https://github.com/sparfenyuk/mcp-proxy) to expose the server over HTTP.
 
 ## Quickstart
 Supply your `GITHUB_PERSONAL_ACCESS_TOKEN` as an environment variable to the container. 
