@@ -1,4 +1,6 @@
-FROM ghcr.io/github/github-mcp-server:0.6.0 AS github-mcp-server
+ARG GITHUB_MCP_SERVER_VERSION=0.6.0
+
+FROM ghcr.io/github/github-mcp-server:${GITHUB_MCP_SERVER_VERSION} AS github-mcp-server
 
 FROM node
 

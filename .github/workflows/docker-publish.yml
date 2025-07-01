@@ -1,8 +1,7 @@
 on:
   workflow_dispatch:
-  push:
-    branches:
-      - main
+  release:
+    types: [published]
 
 jobs:
   build-and-publish:
@@ -26,5 +25,8 @@ jobs:
           images: ghcr.io/${{ github.repository }}
       - uses: docker/build-push-action@v6
         with:
-          tags: ghcr.io/${{ github.repository }}:latest
           push: true
+          tags: |
+            ghcr.io/${{ github.repository }}:latest
+            ghcr.io/${{ github.repository }}:${{ github.event.release.tag_name }}
+          build-args: GITHUB_MCP_SERVER_VERSION=${{ github.event.release.tag_name }}
