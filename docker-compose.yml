@@ -1,6 +1,6 @@
 services:
   github-mcp-server:
-    image: github-mcp-server-http:latest
+    image: ghcr.io/chvolkmann/github-mcp-server-http
     ports:
       - 127.0.0.1:8080:8000
     environment:

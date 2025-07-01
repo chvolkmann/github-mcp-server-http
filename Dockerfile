@@ -1,4 +1,4 @@
-FROM ghcr.io/github/github-mcp-server:latest AS github-mcp-server
+FROM ghcr.io/github/github-mcp-server:0.6.0 AS github-mcp-server
 
 FROM node
 
