@@ -30,7 +30,7 @@ Example `.vscode/mcp.json`:
 {
   "servers": {
     "github-mcp": {
-      "url": "http://localhost:8080/mcp"
+      "url": "http://localhost:4444/mcp"
     }
   }
 }
