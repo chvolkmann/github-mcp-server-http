@@ -11,10 +11,12 @@ docker-compose.yml
 ```yaml
 services:
   github-mcp-server:
-    image: github-mcp-server-http:latest
+    image: ghcr.io/chvolkmann/github-mcp-server-http
     ports:
-      - 127.0.0.1:4444:8000  # run on port 4444
+      # run on port 4444
+      - 127.0.0.1:4444:8000
     environment:
+      # supply in environment or .env
       GITHUB_PERSONAL_ACCESS_TOKEN: ${GITHUB_PERSONAL_ACCESS_TOKEN}
 ```
 
